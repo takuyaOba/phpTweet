@@ -6,6 +6,7 @@
     </div>
     <div class="row">
         <div class="col-md-8 col-md-offset-1">
+            @include('book/message')
             @if($target == 'store')
             <form action="/book" method="post">
             @elseif($target == 'update')
@@ -14,15 +15,15 @@
             @endif
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="form-group">
-                    <label for="name">書籍名</label>
+                    <label for="name">書籍名(name)</label>
                     <input type="text" class="form-control" name="name" value="{{ $book->name }}">
                 </div>
                 <div class="form-group">
-                    <label for="price">価格</label>
+                    <label for="price">価格(price)</label>
                     <input type="text" class="form-control" name="price" value="{{ $book->price }}">
                 </div>
                 <div class="form-group">
-                    <label for="author">著者</label>
+                    <label for="author">著者(author)</label>
                     <input type="text" class="form-control" name="author" value="{{ $book->author }}">
                 </div>
                 <button type="submit" class="btn btn-default">登録</button>
