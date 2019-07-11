@@ -11,9 +11,9 @@
     <table class="table text-center">
       <tr>
         <th class="text-center">ID</th>
-        <th class="text-center">書籍名</th>
-        <th class="text-center">価格</th>
-        <th class="text-center">著者</th>
+        <th class="text-center">書籍名(name)</th>
+        <th class="text-center">価格(price)</th>
+        <th class="text-center">著者(author)</th>
         <th class="text-center">削除</th>
       </tr>
       @foreach($books as $book)
