@@ -19,13 +19,20 @@ class BooksTableSeeder extends Seeder
         $books = [
                   ['name' => 'PHP Book',
                    'price' => 2000,
-                   'author' => 'PHPER'],
+                   'author' => 'PHPER',
+                   'user_id' => 0],
                   ['name' => 'Laravel Book',
                    'price' => 3000,
-                   'author' => null],
+                   'author' => null,
+                   'user_id' => 0],
                   ['name' => 'Ruby Book',
                    'price' => 2500,
-                   'author' => 'Rubyist']
+                   'author' => 'Rubyist',
+                   'user_id' => 1],
+                   ['name' => 'Rails Book',
+                   'price' => 4000,
+                   'author' => 'Railsist',
+                   'user_id' => 1]
                  ];
     
         // 登録

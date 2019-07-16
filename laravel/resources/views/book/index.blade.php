@@ -1,4 +1,4 @@
-@extends('book/layout')
+@extends('layouts.app')
 @section('content')
 <div class="container ops-main">
 <div class="row">
@@ -14,23 +14,37 @@
         <th class="text-center">書籍名(name)</th>
         <th class="text-center">価格(price)</th>
         <th class="text-center">著者(author)</th>
-        <th class="text-center">削除</th>
+        <th class="text-center"></th>
+        <th class="text-center"></th>
       </tr>
       @foreach($books as $book)
       <tr>
-        <td>
-          <a href="/book/{{ $book->id }}/edit">{{ $book->id }}</a>
-        </td>
+        <td>{{ $book->id }}</td>
         <td>{{ $book->name }}</td>
         <td>{{ $book->price }}</td>
         <td>{{ $book->author }}</td>
-        <td>
-          <form action="/book/{{ $book->id }}" method="post">
-            <input type="hidden" name="_method" value="DELETE">
-            <input type="hidden" name="_token" value="{{ csrf_token() }}">
-            <button type="submit" class="btn btn-xs btn-danger" aria-label="Left Align"><span class="glyphicon glyphicon-trash"></span></button>
-          </form>
-        </td>
+        
+
+          
+          @if( ( $book->user_id ) === ( Auth::user()->id ) )
+          <td>
+          
+            <button  class="btn btn-xs btn-danger" ><a href="/book/{{ $book->id }}/edit"><div>編集</div></a></button>
+          </td>
+          <td>
+            <form action="/book/{{ $book->id }}" method="post">
+              <input type="hidden" name="_method" value="DELETE">
+              <input type="hidden" name="_token" value="{{ csrf_token() }}">
+              <button type="submit" class="btn btn-xs btn-danger" aria-label="Left Align"><span class="glyphicon glyphicon-trash"></span><div>削除</div></button>
+            </form>
+          </td>
+
+          @else
+          <td class="text-center">編集</td>
+          <td class="text-center">削除</td>
+          @endif
+          
+          
       </tr>
       @endforeach
     </table>

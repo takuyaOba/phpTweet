@@ -1,3 +1,4 @@
+@extends('layouts.app')
 <div class="container ops-main">
     <div class="row">
         <div class="col-md-6">
