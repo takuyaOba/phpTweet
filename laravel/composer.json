@@ -1,5 +1,7 @@
 {
     "require": {
+        "ext-intl": "*",
+        "guzzlehttp/guzzle": "~5.0",
         "monolog/monolog": "1.0.*"
     },
     "name": "laravel/laravel",
