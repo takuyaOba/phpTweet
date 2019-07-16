@@ -21,7 +21,7 @@
 ## password_resets
 
 | Field      | Type         | Null | Key | Default | Extra |
-|-----------+--------------+------+-----+---------+-------+
+|------------|--------------|------|-----|---------|-------|
 | email      | varchar(191) | NO   | MUL | NULL    |       |
 | token      | varchar(191) | NO   |     | NULL    |       |
 | created_at | timestamp    | YES  |     | NULL    |       |
@@ -30,7 +30,7 @@
 ## books Table
 
 | Field      | Type             | Null | Key | Default | Extra          |
-|-----------|------------------|------+-----+---------+----------------+
+|------------|------------------|------|-----|---------|----------------|
 | id         | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
 | name       | varchar(50)      | NO   |     | NULL    |                |
 | price      | int(11)          | NO   |     | NULL    |                |
