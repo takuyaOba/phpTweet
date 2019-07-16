@@ -5,8 +5,8 @@
 ## users Table
 
 
-| Field             | Type             | Null | Key | Default | Extra          
-|------------------|-----------------+------+-----+---------+----------------+
+| Field             | Type             | Null | Key | Default | Extra          |
+|-------------------|------------------|------|-----|---------|----------------|
 | id                | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
 | name              | varchar(191)     | NO   |     | NULL    |                |
 | email             | varchar(191)     | NO   | UNI | NULL    |                |
