@@ -88,7 +88,7 @@
                     <p>このアプリはPHPの基本アクションを学ぶために作ったアプリです。</p>
                     <p>右上から新規登録、ログイン、ログアウト、パスワードの再発行</p>
                     <p>その後　本の一覧表示　登録　編集　削除が行えます。</p>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://github.com/takuyaOba/phpTweet/tree/master/laravel">GitHubはこちら</a>
                 </div>
             </div>
         </div>
